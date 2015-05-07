@@ -1,0 +1,13 @@
+<div class="artist-index template">
+  <p>This is <em>artist/index.hbs</em>.</p>
+  <div class="biography">
+    <h3>Artist Biography</h3>
+    <p>Seomthing awesome about {{model.name}}.</p>
+  </div>
+
+  <p>{{#link-to "albums" class="button"}}Albums &rarr;{{/link-to}}</p>
+
+  {{render "albums" model.albums}}
+  <!-- here we are rendering the albums controller, it makes model.albums (artist.albums) available as teh model to the albums controller,
+  which we happened to not defined but Ember defines it on the fly.-->
+</div>

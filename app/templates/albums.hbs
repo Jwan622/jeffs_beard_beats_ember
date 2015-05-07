@@ -1,0 +1,9 @@
+<div class="albums template">
+  <p>This is <em>artist.hbs</em>.</p>
+  <ul>
+    {{#each model as |album|}}
+      <li>{{#link-to "album" album}}{{album.title}}({{album.releaseDate}}){{/link-to}}</li>
+    {{/each}}
+  </ul>
+  {{outlet}}
+</div>

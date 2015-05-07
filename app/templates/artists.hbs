@@ -1,0 +1,13 @@
+<div class="artists template">
+  <p>This is <em>artists.hbs</em>.</p>
+  <ul class="artists">
+    {{#each model as |artist|}}
+      <li>{{#link-to "artist" artist}}{{artist.name}}{{/link-to}}</li>
+    {{/each}}
+  </ul>
+
+  {{outlet}}
+  <!-- The child route gets loaded int othe outlet. The link determines which child route gets loaded in there.
+  The "artist" is the route name, the second is the model gets loaded. The first is either a string or a property that could be
+  differrent routes. So it's just a label of the link usually, but sometimes it's a property. -->
+</div>

@@ -1,0 +1,12 @@
+<div class="album template">
+  <p>This is <em>album.hbs</em>.</p>
+  <h4>{{model.title}}</h4>
+  <p>By {{model.artist}}</p>
+
+  <ul>
+    {{#each model.songs as |song|}}
+      <li>{{song.trackNumber}} - {{song.title}}{{song.timeInSeconds}}</li>
+    {{/each}}
+  </ul>
+{{outlet}}
+</div>
